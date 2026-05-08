@@ -17,6 +17,8 @@ dist/
 .vercel/
 *.tsbuildinfo
 
+package-lock.json
+
 # Package manager and runtime logs
 *.log
 npm-debug.log*
