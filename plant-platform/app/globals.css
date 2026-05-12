@@ -1,22 +1,22 @@
 :root {
-  --ui-accent: hsl(18 85% 58%);
-  --ui-accent-deep: hsl(14 78% 41%);
-  --cta-accent: hsl(154 72% 43%);
-  --cta-accent-deep: hsl(167 78% 25%);
-  --bg-top-left: hsl(33 100% 84%);
-  --bg-bottom-right: hsl(188 69% 82%);
-  --blob-warm: hsl(24 100% 71% / 0.5);
-  --blob-cool: hsl(178 62% 64% / 0.45);
-  --slider-wet: hsl(205 78% 56%);
-  --slider-mid: hsl(44 88% 78%);
-  --slider-dry: hsl(24 87% 57%);
-  --text: hsl(193 36% 16%);
-  --text-soft: hsl(197 18% 36%);
-  --panel: hsl(42 100% 98% / 0.86);
-  --panel-border: hsl(40 35% 100% / 0.66);
-  --shadow: 0 24px 60px hsl(195 35% 20% / 0.12);
-  --card-accent: hsl(197 15% 45%);
-  --card-soft: hsl(197 18% 84% / 0.32);
+  --ui-accent: hsl(265 85% 62%);
+  --ui-accent-deep: hsl(265 85% 48%);
+  --cta-accent: hsl(265 85% 62%);
+  --cta-accent-deep: hsl(265 85% 48%);
+  --bg-top-left: hsl(265 80% 96%);
+  --bg-bottom-right: hsl(318 60% 96%);
+  --blob-warm: hsl(318 90% 65% / 0.12);
+  --blob-cool: hsl(265 80% 65% / 0.12);
+  --slider-wet: hsl(265 85% 62%);
+  --slider-mid: hsl(290 70% 60%);
+  --slider-dry: hsl(318 88% 62%);
+  --text: hsl(265 20% 14%);
+  --text-soft: hsl(265 15% 48%);
+  --panel: hsl(0 0% 100% / 0.88);
+  --panel-border: hsl(265 30% 88%);
+  --shadow: 0 24px 60px hsl(265 30% 50% / 0.12);
+  --card-accent: hsl(265 85% 62%);
+  --card-soft: hsl(265 85% 62% / 0.08);
 }
 
 * {
@@ -33,7 +33,7 @@ body {
   background:
     radial-gradient(circle at top left, var(--bg-top-left), transparent 34%),
     radial-gradient(circle at bottom right, var(--bg-bottom-right), transparent 38%),
-    linear-gradient(180deg, hsl(38 86% 96%), hsl(204 72% 95%));
+    hsl(0 0% 100%);
   color: var(--text);
   font-family: "Avenir Next", "Trebuchet MS", sans-serif;
 }
@@ -88,7 +88,7 @@ code {
 }
 
 .eyebrow {
-  color: var(--ui-accent-deep);
+  color: var(--cta-accent);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -112,7 +112,8 @@ code {
 .setup-state h1,
 .modal-head h2,
 .empty-state h2 {
-  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-weight: 800;
   line-height: 0.95;
   margin: 0;
 }
@@ -154,7 +155,7 @@ code {
 .primary-button {
   background: linear-gradient(135deg, var(--cta-accent), var(--cta-accent-deep));
   border-radius: 999px;
-  box-shadow: 0 14px 32px hsl(167 78% 25% / 0.24);
+  box-shadow: 0 14px 32px hsl(318 88% 46% / 0.32);
   color: white;
   font-weight: 700;
   gap: 10px;
@@ -182,13 +183,13 @@ code {
 }
 
 .ghost-button {
-  background: hsl(0 0% 100% / 0.72);
-  border: 1px solid hsl(0 0% 100% / 0.74);
-  color: var(--text);
+  background: transparent;
+  border: 1.5px solid var(--ui-accent);
+  color: var(--ui-accent);
 }
 
 .danger-button {
-  background: hsl(14 82% 52%);
+  background: hsl(335 72% 46%);
   color: white;
 }
 
@@ -225,7 +226,7 @@ code {
   content: "";
   height: 1px;
   inset: auto 24px 0;
-  opacity: 0.45;
+  opacity: 0.35;
   position: absolute;
 }
 
@@ -262,10 +263,10 @@ code {
 }
 
 .icon-button {
-  background: hsl(0 0% 100% / 0.76);
-  border: 1px solid hsl(0 0% 100% / 0.82);
+  background: hsl(265 60% 96%);
+  border: 1px solid hsl(265 40% 86%);
   border-radius: 999px;
-  color: var(--text);
+  color: var(--ui-accent);
   flex: 0 0 auto;
   height: 42px;
   width: 42px;
@@ -309,8 +310,8 @@ code {
 
 .source-chip-subtle {
   align-self: flex-start;
-  background: hsl(0 0% 100% / 0.48);
-  border: 1px solid hsl(0 0% 100% / 0.58);
+  background: hsl(265 40% 94%);
+  border: 1px solid hsl(265 30% 82%);
   color: var(--text-soft);
   font-size: 0.56rem;
   font-weight: 700;
@@ -321,22 +322,22 @@ code {
 }
 
 .source-chip-api {
-  background: hsl(200 40% 95%);
-  border: 1px solid hsl(199 28% 86%);
-  color: hsl(194 32% 28%);
+  background: hsl(265 50% 94%);
+  border: 1px solid hsl(265 30% 82%);
+  color: hsl(265 60% 44%);
 }
 
 .source-chip-usb {
-  background: hsl(154 62% 93%);
-  border: 1px solid hsl(154 46% 80%);
-  color: hsl(166 71% 24%);
+  background: hsl(318 50% 94%);
+  border: 1px solid hsl(318 40% 82%);
+  color: hsl(318 70% 40%);
 }
 
 .card-glow {
   background: radial-gradient(circle, var(--card-accent), transparent 68%);
   border-radius: 50%;
   height: 72px;
-  opacity: 0.14;
+  opacity: 0.18;
   width: 72px;
 }
 
@@ -351,8 +352,8 @@ code {
 }
 
 .metric {
-  background: hsl(0 0% 100% / 0.56);
-  border: 1px solid hsl(0 0% 100% / 0.72);
+  background: hsl(265 40% 97%);
+  border: 1px solid hsl(265 30% 88%);
   border-radius: 18px;
   min-width: 0;
   padding: 12px 14px;
@@ -408,10 +409,10 @@ code {
 
 .copy-button {
   align-items: center;
-  background: hsl(0 0% 100% / 0.74);
-  border: 1px solid hsl(0 0% 100% / 0.8);
+  background: hsl(265 60% 96%);
+  border: 1px solid hsl(265 40% 86%);
   border-radius: 999px;
-  color: var(--text);
+  color: var(--ui-accent);
   display: inline-flex;
   flex: 0 0 auto;
   gap: 8px;
@@ -437,7 +438,7 @@ code {
 
 .empty-state code,
 .setup-copy code {
-  background: hsl(0 0% 100% / 0.72);
+  background: hsl(265 40% 94%);
   border-radius: 10px;
   padding: 4px 8px;
 }
@@ -450,7 +451,7 @@ code {
 
 .modal-backdrop {
   align-items: center;
-  background: hsl(193 36% 16% / 0.28);
+  background: hsl(265 30% 20% / 0.32);
   display: flex;
   inset: 0;
   justify-content: center;
@@ -489,10 +490,10 @@ code {
 }
 
 .modal-close-button {
-  background: hsl(0 0% 100% / 0.76);
-  border: 1px solid hsl(0 0% 100% / 0.82);
+  background: hsl(265 60% 96%);
+  border: 1px solid hsl(265 40% 86%);
   border-radius: 999px;
-  color: var(--text);
+  color: var(--ui-accent);
   flex: 0 0 auto;
   height: 42px;
   width: 42px;
@@ -526,12 +527,17 @@ code {
 }
 
 .field input[type="text"] {
-  background: hsl(0 0% 100% / 0.76);
-  border: 1px solid hsl(0 0% 100% / 0.84);
+  background: hsl(0 0% 100%);
+  border: 1.5px solid hsl(265 30% 84%);
   border-radius: 18px;
   color: var(--text);
   min-width: 0;
   padding: 14px 16px;
+}
+
+.field input[type="text"]:focus {
+  border-color: var(--ui-accent);
+  outline: none;
 }
 
 .field-row {
@@ -541,13 +547,13 @@ code {
 }
 
 .field-row strong {
-  color: var(--ui-accent-deep);
+  color: var(--ui-accent);
   font-size: 1.1rem;
 }
 
 .code-block {
-  background: hsl(0 0% 100% / 0.72);
-  border: 1px solid hsl(0 0% 100% / 0.78);
+  background: hsl(265 40% 97%);
+  border: 1px solid hsl(265 30% 88%);
   border-radius: 18px;
   line-height: 1.55;
   overflow-wrap: anywhere;
@@ -556,8 +562,8 @@ code {
 
 .transport-panel {
   align-items: center;
-  background: hsl(0 0% 100% / 0.58);
-  border: 1px solid hsl(0 0% 100% / 0.74);
+  background: hsl(265 40% 97%);
+  border: 1px solid hsl(265 30% 88%);
   border-radius: 24px;
   display: flex;
   gap: 14px;
@@ -589,8 +595,8 @@ code {
 
 .source-option {
   align-items: flex-start;
-  background: hsl(0 0% 100% / 0.52);
-  border: 1px solid hsl(0 0% 100% / 0.68);
+  background: hsl(0 0% 100%);
+  border: 1px solid hsl(265 30% 88%);
   border-radius: 18px;
   display: flex;
   gap: 10px;
@@ -627,13 +633,13 @@ code {
 }
 
 .source-option-active {
-  background: hsl(0 0% 100% / 0.84);
-  border-color: hsl(0 0% 100% / 0.9);
-  box-shadow: 0 12px 30px hsl(194 30% 20% / 0.08);
+  background: hsl(265 60% 96%);
+  border-color: var(--ui-accent);
+  box-shadow: 0 0 0 1px hsl(265 60% 62% / 0.15);
 }
 
 .usb-status {
-  color: var(--ui-accent-deep);
+  color: var(--ui-accent);
   font-size: 0.82rem;
   font-weight: 600;
   margin: 8px 0 0;
@@ -656,9 +662,9 @@ code {
 .slider::-webkit-slider-runnable-track {
   background:
     linear-gradient(90deg, var(--slider-dry), var(--slider-mid) 52%, var(--slider-wet));
-  border: 1px solid hsl(0 0% 100% / 0.72);
+  border: 1px solid hsl(265 30% 84%);
   border-radius: 999px;
-  box-shadow: inset 0 1px 2px hsl(0 0% 100% / 0.35);
+  box-shadow: inset 0 1px 2px hsl(0 0% 0% / 0.4);
   height: 14px;
 }
 
@@ -666,12 +672,12 @@ code {
   -webkit-appearance: none;
   appearance: none;
   background:
-    radial-gradient(circle at 35% 35%, hsl(0 0% 100%), hsl(0 0% 100% / 0.86) 42%, hsl(194 21% 86%) 100%);
-  border: 2px solid hsl(0 0% 100% / 0.95);
+    radial-gradient(circle at 35% 35%, hsl(0 0% 100%), hsl(0 0% 88%) 42%, hsl(265 20% 72%) 100%);
+  border: 2px solid hsl(0 0% 100% / 0.9);
   border-radius: 50%;
   box-shadow:
-    0 10px 24px hsl(194 30% 20% / 0.18),
-    inset 0 -2px 4px hsl(194 28% 24% / 0.16);
+    0 10px 24px hsl(265 40% 10% / 0.5),
+    inset 0 -2px 4px hsl(265 30% 20% / 0.3);
   height: 26px;
   margin-top: -7px;
   width: 26px;
@@ -680,20 +686,20 @@ code {
 .slider::-moz-range-track {
   background:
     linear-gradient(90deg, var(--slider-dry), var(--slider-mid) 52%, var(--slider-wet));
-  border: 1px solid hsl(0 0% 100% / 0.72);
+  border: 1px solid hsl(265 30% 84%);
   border-radius: 999px;
-  box-shadow: inset 0 1px 2px hsl(0 0% 100% / 0.35);
+  box-shadow: inset 0 1px 2px hsl(0 0% 0% / 0.4);
   height: 14px;
 }
 
 .slider::-moz-range-thumb {
   background:
-    radial-gradient(circle at 35% 35%, hsl(0 0% 100%), hsl(0 0% 100% / 0.86) 42%, hsl(194 21% 86%) 100%);
-  border: 2px solid hsl(0 0% 100% / 0.95);
+    radial-gradient(circle at 35% 35%, hsl(0 0% 100%), hsl(0 0% 88%) 42%, hsl(265 20% 72%) 100%);
+  border: 2px solid hsl(0 0% 100% / 0.9);
   border-radius: 50%;
   box-shadow:
-    0 10px 24px hsl(194 30% 20% / 0.18),
-    inset 0 -2px 4px hsl(194 28% 24% / 0.16);
+    0 10px 24px hsl(265 40% 10% / 0.5),
+    inset 0 -2px 4px hsl(265 30% 20% / 0.3);
   height: 26px;
   width: 26px;
 }
@@ -706,14 +712,14 @@ code {
 }
 
 .modal-loading {
-  background: hsl(0 0% 100% / 0.72);
-  border: 1px solid hsl(0 0% 100% / 0.8);
+  background: hsl(265 40% 97%);
+  border: 1px solid hsl(265 30% 88%);
   border-radius: 18px;
   padding: 14px 16px;
 }
 
 .form-error {
-  color: hsl(2 74% 42%);
+  color: hsl(335 80% 62%);
   font-size: 0.92rem;
   font-weight: 700;
   margin: 0;
