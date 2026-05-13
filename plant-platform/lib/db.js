@@ -3,12 +3,31 @@ import { neon } from "@neondatabase/serverless";
 let client = null;
 let schemaReadyPromise = null;
 
+const DATABASE_URL_ENV_KEYS = [
+  "DATABASE_URL",
+  "POSTGRES_URL",
+  "POSTGRES_PRISMA_URL",
+  "POSTGRES_URL_NON_POOLING"
+];
+
+function getDatabaseUrl() {
+  for (const key of DATABASE_URL_ENV_KEYS) {
+    if (process.env[key]) {
+      return process.env[key];
+    }
+  }
+
+  return "";
+}
+
 function getClient() {
-  const databaseUrl = process.env.DATABASE_URL;
+  const databaseUrl = getDatabaseUrl();
 
   if (!databaseUrl) {
     throw new Error(
-      "DATABASE_URL is not configured. Connect a Neon Postgres database before running plant-platform."
+      `No Postgres connection string is configured. Add one of ${DATABASE_URL_ENV_KEYS.join(
+        ", "
+      )} in Vercel for plant-platform.`
     );
   }
 

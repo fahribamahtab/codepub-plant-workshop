@@ -21,7 +21,7 @@ A separate multi-plant dashboard for the workshop. This app is designed for:
 
 1. Create a Neon Postgres database.
 2. Copy `.env.example` to `.env.local`.
-3. Add your `DATABASE_URL`.
+3. Add your Postgres connection string as `DATABASE_URL`.
 4. Install dependencies:
 
    ```bash
@@ -37,6 +37,19 @@ A separate multi-plant dashboard for the workshop. This app is designed for:
 The database schema is created automatically on first request.
 
 The app persists plant metadata and the latest reading snapshot for each plant. It does not keep a historical readings log.
+
+## Vercel environment variables
+
+When deploying from the monorepo, set the Vercel project root directory to `plant-platform`.
+Then add the database connection string in the Vercel project settings for the same environment you are deploying to.
+
+The app prefers `DATABASE_URL`, but also accepts the common Vercel Postgres/Neon integration names:
+
+- `POSTGRES_URL`
+- `POSTGRES_PRISMA_URL`
+- `POSTGRES_URL_NON_POOLING`
+
+Local `.env` and `.env.local` files are not uploaded to Vercel automatically. If the app shows the setup state after deploy, redeploy after adding the variable under Vercel's Environment Variables for Production, Preview, or Development as needed.
 
 ## Workshop flow
 
