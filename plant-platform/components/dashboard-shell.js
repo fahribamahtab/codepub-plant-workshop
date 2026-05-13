@@ -874,7 +874,7 @@ export default function DashboardShell({ initialPlants }) {
       <section className="platform-hero">
         <div className="platform-copy-block">
           <p className="eyebrow">Plant Platform</p>
-          <h1>One dashboard to rule them all 🪴</h1>
+          <h1>Plant Health Dashboard</h1>
           <p className="platform-copy">
             Create a plant, connect the UUID, and watch its card update as new moisture readings come in.
           </p>
