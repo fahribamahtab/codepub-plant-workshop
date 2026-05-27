@@ -2,7 +2,7 @@
 
 Welcome to challenge mode. This is the same workshop as the guided version, but with less hand-holding.
 
-The goal is still to get an ESP32 to read a soil moisture sensor and send those readings to https://plant-workshop.vercel.app/ 🌱
+The goal is still to get an ESP32 to read a soil moisture sensor and send those readings to https://codepub-nl.site/ 🌱
 
 Treat each section like a mini challenge. Try to solve it from the prompt and the hints first. If you get stuck, open the answer section for the exact steps. If you want everything spelled out from the start, use [guided.md](./guided.md).
 
@@ -180,7 +180,7 @@ Final step: send the readings from your board to the shared plant dashboard.
 
 Success looks like this ✅
 
-- You have created a plant on https://plant-workshop.vercel.app/.
+- You have created a plant on https://codepub-nl.site/.
 - You have copied the plant UUID.
 - The ESP32 is connected to WiFi.
 - The dashboard updates when your board posts a new reading.
@@ -194,14 +194,14 @@ Hints 🧭
 <details>
 <summary>Show the plant-platform answer 👀</summary>
 
-Go to https://plant-workshop.vercel.app/ and create a new digital plant. Copy the UUID for that plant.
+Go to https://codepub-nl.site/ and create a new digital plant. Copy the UUID for that plant.
 
 Then open [plant-platform-sensor.ino](./plant-platform-sensor.ino) and update these constants:
 
 ```ino
 const char* wifiSsid = "";
 const char* wifiPassword = "";
-const char* serverBaseUrl = "https://plant-workshop.vercel.app";
+const char* serverBaseUrl = "https://codepub-nl.site/";
 const char* plantId = "";
 ```
 
@@ -209,7 +209,7 @@ You should end up with:
 
 - `wifiSsid`: your WiFi network name
 - `wifiPassword`: your WiFi password
-- `serverBaseUrl`: `https://plant-workshop.vercel.app`
+- `serverBaseUrl`: `https://codepub-nl.site/`
 - `plantId`: the UUID from the dashboard
 
 Upload the sketch again. If everything is set correctly, the board will keep printing raw values to serial and will also post them to the API in the background.
@@ -230,6 +230,6 @@ You are finished when:
 
 - the ESP32 is powered and wired correctly
 - the Serial Monitor shows changing moisture readings
-- your plant on https://plant-workshop.vercel.app/ updates in real time
+- your plant on https://codepub-nl.site/ updates in real time
 
 If you get blocked for too long, switch over to [guided.md](./guided.md) and keep moving.
