@@ -289,10 +289,10 @@ function PlantCard({ copied, onCopyUuid, onEdit, plant }) {
         <div className="card-glow"></div>
       </div>
       <div className="card-footer">
-        <div className="uuid-block">
+        {/* <div className="uuid-block">
           <span className="mini-label">UUID</span>
           <code>{plant.id}</code>
-        </div>
+        </div> */}
         <button
           className="copy-button"
           onClick={function () {
@@ -873,7 +873,7 @@ export default function DashboardShell({ initialPlants }) {
     <>
       <section className="platform-hero">
         <div className="platform-copy-block">
-          <p className="eyebrow">Plant Platform</p>
+          <p className="eyebrow">Code Pub</p>
           <h1>Plant Health Dashboard</h1>
           <p className="platform-copy">
             Create a plant, connect the UUID, and watch its card update as new moisture readings come in.

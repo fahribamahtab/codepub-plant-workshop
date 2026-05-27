@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 function SetupState({ message }) {
   return (
     <section className="setup-state panel-card">
-      <p className="eyebrow">Plant Platform</p>
+      <p className="eyebrow">Code Pub</p>
       <h1>Connect a database to bring the platform online.</h1>
       <p className="platform-copy">
         The dashboard and API are ready, but the app needs a Postgres connection before it can

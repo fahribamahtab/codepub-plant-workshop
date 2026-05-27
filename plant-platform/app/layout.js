@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Plant Platform",
+  title: "Code Pub",
   description: "Multi-plant dashboard and ingestion API for workshop moisture sensors."
 };
 
@@ -12,3 +12,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
