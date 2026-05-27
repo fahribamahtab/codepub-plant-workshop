@@ -11,6 +11,6 @@ The end goal for both paths is the same:
 
 1. Get the board talking to Arduino IDE.
 2. Read moisture values from the sensor.
-3. Send those readings to https://plant-workshop.vercel.app/.
+3. Send those readings to https://codepub-nl.site/.
 
 If you just want the most direct route, start with [guided.md](./guided.md). If you want to figure more of it out yourself first, start with [unguided.md](./unguided.md).
