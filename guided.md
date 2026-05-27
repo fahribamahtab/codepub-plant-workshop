@@ -191,4 +191,4 @@ void loop() {
 }
 ```
 
-Once the code is uploaded, you should see readings update in real time on your digital plant. 🎉
+Once the code is uploaded, you should see readings update in real time on your digital plant. Well done!
